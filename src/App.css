@@ -1,0 +1,137 @@
+@layer tailwind-base, primereact, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+#root {
+  max-width: 1280px;
+  text-align: center;
+}
+
+.p-inputnumber-input{
+  @apply bg-slate-700;
+  @apply border-slate-700;
+  @apply font-bold;
+  @apply text-slate-100;
+  @apply px-4;
+  width: 30vw;
+  min-width: 130px;
+  max-width: 280px;
+}
+
+.ready .p-inputnumber-input{
+  @apply bg-slate-300;
+  @apply border-slate-300;
+  @apply text-slate-700;
+}
+
+.orange .p-inputnumber-input{
+  @apply bg-lime-100;
+  @apply border-lime-200;
+  @apply text-slate-700;
+}
+
+
+.black .p-inputnumber-input{
+  @apply bg-slate-700;
+  @apply border-slate-700;
+  @apply text-slate-100;
+}
+
+.p-float-label label{
+  color: #bec3cb;
+}
+
+.ready .p-float-label label{
+  color: #2261a9;
+}
+
+.ready button{
+  background-color: #2261a9;
+}
+
+.p-inputnumber-input:focus{
+  filter: drop-shadow(0px 0px 15px #68B5E5);
+}
+
+.p-button:hover{
+  filter: drop-shadow(0px 0px 10px #6967f8);
+}
+
+#logo{
+  filter: drop-shadow(0px 0px 30px #6967f8);
+}
+
+.first-screen{
+  background-color: #242424;
+}
+
+.txt-sm{
+  font-size: max(min(1.3vw,1em),0.5em);
+}
+
+.txt-md{
+  font-size: max(min(2.5vw,1.3em),0.9em);
+}
+
+.txt-lg{
+  font-size: max(min(5vw,2.5em),1.7em);
+}
+
+.glass{
+  background: rgba(203, 208, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1.5px solid rgba(203, 208, 255, 0.45);
+  transition: all 0.3s;
+}
+
+.orange .glass{
+  background: rgba(176, 196, 161, 0.37);
+  border: 1.5px solid rgba(176, 196, 161, 0.47);
+}
+
+.black .glass{
+  background: rgba(0, 0, 0, 0.37);
+  border: 1.5px solid rgba(0, 0, 0, 0.9);
+}
+
+.chart-cont:hover{
+  scale: 1.02 !important;
+}
+
+.stat-box:hover{
+  scale: 1.05 !important;
+}
+
+@media screen and (max-height:700px) {
+  .txt-sm{
+    font-size: max(min(0.3vw,1em),0.5em);
+  }
+  
+  .txt-md{
+    font-size: max(min(0.5vw,1.3em),0.9em);
+  }
+  
+  .txt-lg{
+    font-size: max(min(0vw,2.5em),1.7em);
+  }
+  .stat-box{
+    min-height: 115px !important;
+  }
+}
+
+@media screen and (max-height:500px){
+  #logo{
+    width: 12rem;
+  }
+
+}
