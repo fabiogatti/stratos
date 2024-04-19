@@ -351,9 +351,9 @@ let currentClouds = ''
 
 function App() {
 
-  const [latitude, setLatitude] = useState('')
+  const [latitude, setLatitude] = useState(0)
 
-  const [longitude, setLongitude] = useState('')
+  const [longitude, setLongitude] = useState(0)
 
   const [values, setValues] = useState({})
 
